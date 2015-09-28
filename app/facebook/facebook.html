@@ -1,0 +1,42 @@
+<div class="row" ng-controller="FacebookCtrl">
+      <div class="col-md-4">
+        <h4>{{welcomeMsg}}</h4>
+        <div ng-if="isLoggegIn == false">
+          <button type="button" class="btn btn-default" ng-click="login()">Login</button>
+        </div>
+        <div ng-if="isLoggegIn == true">
+          <button type="button" class="btn btn-default" ng-click="logout()">Logout</button>
+        </div>
+        <br>
+        <br>
+        <div class="well" ng-if="isLoggegIn == true">
+          <h4>User Info</h4>
+          <ul>
+            <li>ID : {{userInfo.id}}</li>
+            <li>First name : {{userInfo.first_name}}</li>
+            <li>Last name : {{userInfo.last_name}}</li>
+            <li>Email : {{userInfo.email}}</li>
+            <li>Gender : {{userInfo.gender}}</li>
+            <li>Locale : {{userInfo.locale}}</li>
+          </ul>
+        </div>
+        <br>
+        <div class="well">
+          <h4>Permissions</h4>
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-md-8">
+        <h3>Welcome to Facebook!</h3>
+        <form>
+          <div class="form-group">
+            <label>Status Update</label>
+            <textarea class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>  
+      </div>
+    </div>
