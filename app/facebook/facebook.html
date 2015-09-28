@@ -1,6 +1,9 @@
 <div class="row" ng-controller="FacebookCtrl">
       <div class="col-md-4">
         <h4>{{welcomeMsg}}</h4>
+         <div ng-if="isLoggegIn == true">
+         <a target="_blank" href="{{userInfo.link}}"><img ng-src="{{picture}}"></a>
+        </div>
         <div ng-if="isLoggegIn == false">
           <button type="button" class="btn btn-default" ng-click="login()">Login</button>
         </div>
